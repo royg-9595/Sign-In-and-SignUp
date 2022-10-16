@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>MyWaySampleLogin</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <div class="main"> 
+        <div class="content">
+            <h1>Web Design & <br><span>Development</span></h1>
+            <p class="par">
+                India’s first tech-powerhouse for freshers<br>
+                Hiring on behalf of 1000+ employers</p>
+
+                <button class="cn"><a onclick="window.location='MyWay.html'">JOIN US</a></button>
+
+                
+                <form class="form" method="post" name="form" onsubmit="return validation()">
+                    <h2>Login</h2>
+                    <input type="email" name="email" placeholder="Enter Email">
+                    <div id="email_error">Please enter valid email</div>
+                    <input type="password" name="password" placeholder="Enter Password">
+                    <div id="pass_error">Please enter valid password</div>
+                    <button class="btnn" type="submit" >Submit</a></button>
+
+                    <p class="link">Don't have an account<br>
+                    <a onclick="window.location='signup.html'">Sign up </a> here</a></p>
+
+                    </form>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <script>
+        
+        var email = document.forms['form']['email'];
+        var password= document.forms['form']['password'];
+
+        var email_error= document.getElementById('email_error');
+        var pass_error = document.getElementById('pass_error');
+        function validation(){
+            if (email.value.length < 9) {
+                email_error.style.display="block";
+                email.focus();
+                return false;
+            }
+
+            if (password.value.length < 9) {
+                pass_error.style.display="block";
+                password.focus();
+                return false;
+            }
+        }
+            </script>
+</body>
+</html>
